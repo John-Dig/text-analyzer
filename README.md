@@ -75,18 +75,69 @@ Expected Output: 3
 
 
 
-
+## test .0
 Test: "It should censor 1 specified word, case sensitive, preliminary test only 1 word."
 Code:
 const word = "shiz";
 const text = "hello muffins, stay out of the shiz"
 wordCensor(badWord, text);
 Expected Output: "CENSORED"
-
-Test: "It should censor 1 specified word, case sensitive."
+## test .1
+Test: "It should return an arry with bad word censored."
 Code:
 const word = "shiz";
 const text = "hello muffins, stay out of the shiz"
 wordCensor(badWord, text);
 Expected Output: ['hello', 'muffins', 'stay', 'out', 'of', 'the', 'CENSORED']
+## test .2
+Test: "It should return the string with bad word censored."
+Code:
+const word = "shiz";
+const text = "hello muffins, stay out of the shiz"
+wordCensor(badWord, text);
+Expected Output: 'hello muffins stay out of the CENSORED'
 
+## test .21
+Test: "It should return the string with bad word censored. Now hardcoding bad word"
+Code:
+const word = "shiz";
+const text = "hello muffins, stay out of the shiz"
+wordCensor(badWord, text);
+Expected Output: 'hello muffins stay out of the CENSORED'
+
+
+
+
+
+## test .3
+Test: "It should now return a string with 4 bad words censored. Hard coding in words, changing to single argument input"
+Code:
+Bad words (now hardcoded) = "shiz, shniz, piz, shnayblay";
+const text = "hello muffins, stay out of the shiz, shniz, piz, and shnayblay"
+Expected Output "hello muffins, stay out of the CENSORED, CENSORED, CENSORED, and CENSORED"
+
+
+## test .4 
+Test: "it should return a string with 4 bad words censored, now with --- to the number of characters of bad word.
+Code:
+Bad words = "shiz, shniz, piz, shnayblay";
+const text = "hello muffins, stay out of the shiz, shniz, piz, and shnayblay"
+Expected Output: "hello muffins, stay out of the ----, -----, ---, and ---------"
+
+
+## test .9
+Test: ".4, just adding output
+
+
+
+
+
+
+
+
+## test 1.0
+Test: ".4 should work with UI"
+Code:
+Bad words =  "shiz, shniz, piz, shnayblay";
+const text = "hello muffins, stay out of the shiz, shniz, piz, and shnayblay"
+Expected Output: "hello muffins, stay out of the ----, -----, ---, and ---------"
