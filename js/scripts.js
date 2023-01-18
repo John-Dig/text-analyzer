@@ -16,7 +16,6 @@ function wordCounter(text) {
 
 function numberOfOccurrencesInText(word, text) {
   const textArray = text.split(" ");
-  console.log(textArray);
   let wordCount = 0;
   textArray.forEach(function(element) { 
     if (element.toLowerCase().includes(word.toLowerCase())) {
@@ -26,4 +25,19 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }  
 
-//UI Logic
+
+//word-censor
+
+function wordCensor(badWords, text) {
+  const textArray = text.split(" ");
+  let output = [];
+  textArray.forEach(function(element) {
+    if (element.includes(badWords)) {
+      element = "CENSORED"; 
+    }
+      output.push(element);
+    
+  });
+  return output;
+  console.log(output);   
+}

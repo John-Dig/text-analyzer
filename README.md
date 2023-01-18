@@ -1,4 +1,4 @@
-Describe: wordCounter()
+## Describe: wordCounter()
 
 Test: "It should return 1 if a passage has just one word."
 Code:
@@ -15,7 +15,6 @@ Expected Output: 2
 Test: "It should return 0 for an empty string."
 Code: wordCounter("");
 Expected Output: 0
-  actual output: 1 
 
 Test: "It should return 0 for a string that is only spaces."
 Code: wordCounter("            ");
@@ -68,3 +67,26 @@ const text = "Red! Red. I Like red, green and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+## word-censor
+
+
+
+
+
+
+
+Test: "It should censor 1 specified word, case sensitive, preliminary test only 1 word."
+Code:
+const word = "shiz";
+const text = "hello muffins, stay out of the shiz"
+wordCensor(badWord, text);
+Expected Output: "CENSORED"
+
+Test: "It should censor 1 specified word, case sensitive."
+Code:
+const word = "shiz";
+const text = "hello muffins, stay out of the shiz"
+wordCensor(badWord, text);
+Expected Output: ['hello', 'muffins', 'stay', 'out', 'of', 'the', 'CENSORED']
+
