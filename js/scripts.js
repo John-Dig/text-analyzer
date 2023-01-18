@@ -37,21 +37,6 @@ window.addEventListener("load", function(e){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Word Censor Complete Business Logic
 function wordCensor(text) {
   const textArray = text.split(" ");
